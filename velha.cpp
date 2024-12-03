@@ -32,6 +32,13 @@ int VerificaVelha( int velha[3][3] )
 
 	if (qnt_x < qnt_o || qnt_x-1 > qnt_o)
 		return -2; // Retorna -2, que caracteriza jogo impossível
+
+	// Avalia vitórias
+	for (int i=0; i<3; i++){
+		// fixa as colunas e avalia as linhas
+		if (velha[i][0]==1 && velha[i][1]==1 && velha[i][2]==1)
+			return 1;
+		}
 	return 0; /*!< retorna zero para teste */ 
 }
 

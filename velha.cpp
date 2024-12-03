@@ -47,6 +47,12 @@ int VerificaVelha( int velha[3][3] )
 			return 2;
 		}
 	}
+		// Se não foi um jogo impossível e não houve vitória, e não há espaços mais a serem jogados só é possível empate
+		// Para não instanciar outro contador de nulidade, consideramos qnt_o+qnt_x == 9
+
+	if (qnt_o+qnt_x==9)
+		return 0;
+
 	return -1; /*!< retorna zero para teste */ 
 }
 

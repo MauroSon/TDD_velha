@@ -11,11 +11,11 @@
 
 
 TEST_CASE( "Testa velha", "[single-file]" ) {
-	int teste1[3][3]= {   { 1, 0, 2 }, 
-	                      { 1, 0, 2 },
-						  { 1, 0, 0 }
+	int teste1[3][3]= {   { 2, 2, 2 }, 
+	                      { 1, 0, 0 },
+						  { 1, 1, 0 }
 					  };
-    REQUIRE( VerificaVelha(teste1) == 1 );
+    REQUIRE( VerificaVelha(teste1) == 2 );
 
 
 } 

@@ -36,10 +36,13 @@ int VerificaVelha( int velha[3][3] )
 	// Avalia vitórias
 	for (int i=0; i<3; i++){
 		// fixa as colunas e avalia as linhas
-		if ((velha[i][0]==1 && velha[i][1]==1 && velha[i][2]==1)|| (velha[0][i]==1 && velha[1][i]==1 && velha[2][i]==1)){
+		if ((velha[i][0]==1 && velha[i][1]==1 && velha[i][2]==1) || (velha[0][i]==1 && velha[1][i]==1 && velha[2][i]==1)){
 			if (qnt_o >= qnt_x) // vitória de X, é valido para menos O que X
 				return -2;
 			return 1;
+		}
+		else if (velha[i][0]==2 && velha[i][1]==2 && velha[i][2]==2){
+			return 2;
 		}
 	}
 	return 0; /*!< retorna zero para teste */ 

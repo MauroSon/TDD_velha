@@ -41,7 +41,9 @@ int VerificaVelha( int velha[3][3] )
 				return -2;
 			return 1;
 		}
-		else if (velha[i][0]==2 && velha[i][1]==2 && velha[i][2]==2){
+		else if ((velha[i][0]==2 && velha[i][1]==2 && velha[i][2]==2) || (velha[0][i]==2 && velha[1][i]==2 && velha[2][i]==2)){
+			if (qnt_o != qnt_x) // Vitória de O, é válido para O igual X
+				return -2;
 			return 2;
 		}
 	}

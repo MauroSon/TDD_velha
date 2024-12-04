@@ -33,15 +33,19 @@ int VerificaVelha(int velha[3][3]) {
         ||
         (velha[0][i] == 1 && velha[1][i] == 1 && velha[2][i] == 1))
         ||
-        ((velha[0][0] == 1 && velha[1][1] == 1 && velha[2][2]) //  Avalia Diagonal principal 
+        ((velha[0][0] == 1 && velha[1][1] == 1 && velha[2][2] == 1) //  Avalia Diagonal principal 
         || 
-        (velha[0][2] == 1 && velha[1][1] == 1 && velha[2][0]))) { //  Avalia Diagonal oposta
+        (velha[0][2] == 1 && velha[1][1] == 1 && velha[2][0] == 1))) { //  Avalia Diagonal oposta
             if (qnt_o >= qnt_x)  // vitória de X, é valido para menos O que X
                 return -2;
             return 1;
         } else if ((velha[i][0] == 2 && velha[i][1] == 2 && velha[i][2] == 2)
         ||
-        (velha[0][i] == 2 && velha[1][i] == 2 && velha[2][i] == 2)) {
+        (velha[0][i] == 2 && velha[1][i] == 2 && velha[2][i] == 2)
+        ||
+        ((velha[0][0] == 2 && velha[1][1] == 2 && velha[2][2] == 2) //  Avalia Diagonal principal 
+        || 
+        (velha[0][2] == 2 && velha[1][1] == 2 && velha[2][0] == 2))) { // Avalia Diagonal oposta
             if (qnt_o != qnt_x)  // Vitória de O, é válido para O igual X
                 return -2;
             return 2;
